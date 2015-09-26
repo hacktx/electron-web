@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Name: {{ user.name }}</h1>
+  <p>Email: {{ user.email }}</p>
+  <p>Age: {{ user.age }}</p>
+  <p>School: {{ user.school }}</p>
+  <p>Confirmed invite: {{ user.confirmed }}</p>
+  <p>Checked in: {{ user.checked_in }}</p>
+  <p>Waver signed (non-UT only): {{ user.waiver_signed }}</p>
+  <form action="https://my.hacktx.com/api/checkin" method="post">
+    <input type="hidden" name="volunteer_id" value="{{ volunteer_id }}">
+    <input type="hidden" name="email" value="{{ user.email }}">
+    <button type="submit" class="btn btn-default">Check-in</button>
+  </form>
+  <a href="/" class="btn btn-danger">Cancel</a>
+</div>
+{% endblock %}

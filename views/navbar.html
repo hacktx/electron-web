@@ -7,14 +7,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Electron Web</a>
+      <a class="navbar-brand" href="/">Electron Web</a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        {% if user %}
-          <a href="/login"><button type="button" class="btn btn-default navbar-btn">Logout</button></a>
-        {% else %}
-          <a href="/login"><button type="button" class="btn btn-default navbar-btn">Sign in</button></a>
+        {% if volunteer_id %}
+          <a href="/logout"><button type="button" class="btn btn-default navbar-btn">Logout</button></a>
         {% endif %}
       </ul>
     </div>

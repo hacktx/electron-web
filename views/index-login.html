@@ -5,7 +5,12 @@
   <div class="jumbotron">
     <h1>Welcome to Electron Web</h1>
     <p>Please login below with your Volunteer ID</p>
-    <p><a class="btn btn-lg btn-primary" href="/login" role="button"><i class="fa fa-facebook"></i>Login</a></p>
+    <form class="form-inline" action="/login" method="post">
+      <div class="form-group">
+        <label for="id">VolunteerID</label>
+        <input type="text" class="form-control" id="id" name="id" placeholder="abc123">
+      </div>
+    </form>
   </div>
 </div>
 {% endblock %}
